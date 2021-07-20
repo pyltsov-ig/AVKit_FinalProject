@@ -10,11 +10,6 @@ import AVKit
 
 class ViewController: UIViewController {
     
-//    private (set) var tableView: UITableView = {
-//        let tableView = UITableView(frame: self.view.bounds, style: UITableView.Style.plain)
-//        let tableViewCell = UITableViewCell()
-//        return tableView
-//    }()
     private var tableView = UITableView()
     
     let movies = Video.getVideoArray()
@@ -30,20 +25,10 @@ class ViewController: UIViewController {
         tableView.dataSource = self
         tableView.backgroundColor = .white
         
-        //tableView.register(UINib(nibName: "CustomCell", bundle: Bundle.main), forCellReuseIdentifier: "cell")
-        
-       
-        //tableView.register(CustomCell.self, forCellReuseIdentifier: "cell")
-        
         tableView.register(CustomCell.classForCoder(), forCellReuseIdentifier: "cell")
        
-        //tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         view.addSubview(tableView)
-        
-        
     }
-    
-
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
@@ -51,9 +36,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 300
     }
-    
-    
-    
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -66,12 +48,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         
         cell.videoTitle.text = movies[indexPath.row].videoTitle
         cell.videoImage.image = movies[indexPath.row].videoImage
-        
-        //cell.imageView?.image = movies[indexPath.row].videoImage
-        //cell.textLabel?.text = movies[indexPath.row].videoTitle
-        
-        
-        
+
         return cell
     }
     
@@ -86,7 +63,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             playerController.player?.play()
         }
     }
-    
 }
 
 

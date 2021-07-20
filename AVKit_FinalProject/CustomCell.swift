@@ -22,10 +22,10 @@ class CustomCell: UITableViewCell {
     }()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String!) {
+
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.addSubview(videoImage)
         self.addSubview(videoTitle)
-        
     }
     
     required init?(coder: NSCoder) {
