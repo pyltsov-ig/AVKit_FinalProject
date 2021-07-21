@@ -22,6 +22,7 @@ struct Video {
     }
     
     private enum VideoUrl:String {
+        
         case video1 =  "https://ia802609.us.archive.org/23/items/Aladdin_315/Aladdin_512kb.mp4"
         case video2 = "https://ia800604.us.archive.org/19/items/Avez-vousDjVu...LePlusPetitZooDuMonde/104_Le_Plus_Petit_Zoo_du_Monde.mp4"
         case video3 = "https://ia800705.us.archive.org/28/items/TheSpiritOf43_56/The_Spirit_of__43_512kb.mp4"
